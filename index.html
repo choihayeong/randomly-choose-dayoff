@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤으로 연차 정하기</title>
+    <script src="js/LunarCalendar.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <h1>Randomly choose your day-off</h1>
+            <div class="calendar-wrap">
+                <h2>Calendar</h2>
+                <div class="table-wrap">
+                    <table id="calendar" class="table">
+                        <caption>calendar</caption>
+                        <tbody>
+                            <tr>
+                                <td onclick="prevCalendar()" style="cursor:pointer">
+                                    <i class="fas fa-chevron-left" style="color:#fff"></i>
+                                </td>
+                                <td id="tbCalendarYM" colspan="5">yyyy년 m월</td>
+                                <td onclick="nextCalendar()" style="cursor:pointer">
+                                    <i class="fas fa-chevron-right" style="color:#fff"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>일</td>
+                                <td>월</td>
+                                <td>화</td>
+                                <td>수</td>
+                                <td>목</td>
+                                <td>금</td>
+                                <td>토</td>
+                            </tr>
+                            <!-- generate calendar -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="calendar-info">
+                <button type="button" id="randomBtn" class="btn btn--generate"> 
+                    랜덤으로 연차 선택하기! 
+                </button>
+                <p id="message02" class="calendar-info__desc">
+                    * <span>mm월의 법정 공휴일은 dd일, dd일, ... 입니다.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div id="alert">
+            <p id="message">
+                <span>dd</span>일에 연차를 쓰세여!
+            </p>
+        </div>
+    </div>
+
+
+    <script language="javascript" type="text/javascript">
+        buildCalendar();
+    </script>
+</body>
+</html>
