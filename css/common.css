@@ -10,16 +10,16 @@ button {border:0 none;background:transparent;cursor:pointer}
 .calendar-wrap {margin-top:30px}
 .calendar-info {margin-top:30px}
 .calendar-info__desc {margin-top:10px;color:red;font-weight:bold;}
-.calendar-info__desc span {color:#001;}
+.calendar-info__desc span {color:#001}
 .table-wrap {margin-top:15px}
 table {border-spacing:0;border-collapse:collapse}
 #calendar {margin:0 auto;background:#2b4450;border-radius:10px;box-shadow:1px 1px 10px 0 rgba(0,0,0,0.8)}
 #calendar td {width:50px;height:50px;border:0 none;border-radius:50%;color:#fff;font-size:20px;text-align:center}
 #calendar td:first-child {color:#F79DC2}
-#calendar td:last-child {color:skyblue}
 .btn {height:50px;padding:0 25px;border-radius:50px;line-height:50px;background-color:rgba(90, 90, 255, 1);color:#fff;font-size:20px;font-weight:bold}
 /* alert */
-.modal {position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:rgba(0, 0, 0, 0.5);}
+.modal {position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:rgba(0, 0, 0, 0.5)}
 .modal.active {display:block}
 #alert {position:absolute;top:50%;left:50%;width:auto;max-width:750px;padding:30px;border-radius:10px;background:#fafafa;transform:translate(-50%, -50%)}
 #alert p {font-size:32px;font-weight:bold}
+/* #calendar td:last-child {color:skyblue} */
