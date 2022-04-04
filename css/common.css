@@ -1,25 +1,40 @@
 @charset "UTF-8";
 /* reset */
 * {margin:0;padding:0;box-sizing:border-box}
-body, input, button, th, td, select, textarea {font-family:'Malgun Gothic','맑은 고딕',Arial, sans-serif;font-size:18px;line-height:1.5;font-weight:400}
-button {border:0 none;background:transparent;cursor:pointer}
+body, input, button, th, td, select, textarea {font-family:'Noto Sans KR', 'Malgun Gothic','맑은 고딕', Arial, sans-serif;font-size:18px;line-height:1.5;font-weight:400}
+button {color:inherit;border:0 none;background:transparent;cursor:pointer}
+table {border-spacing:0;border-collapse:collapse}
+th, td {color:inherit}
 .blind, legend, caption {position:absolute;width:1px;height:1px;margin:-1px;clip:rect(0 0 0 0)}
 /* common */
-.wrap {text-align:center}
-.content {margin:60px 0}
-.calendar-wrap {margin-top:30px}
-.calendar-info {margin-top:30px}
-.calendar-info__desc {margin-top:10px;color:red;font-weight:bold;}
-.calendar-info__desc span {color:#001}
-.table-wrap {margin-top:15px}
-table {border-spacing:0;border-collapse:collapse}
-#calendar {margin:0 auto;background:#2b4450;border-radius:10px;box-shadow:1px 1px 10px 0 rgba(0,0,0,0.8)}
-#calendar td {width:50px;height:50px;border:0 none;border-radius:50%;color:#fff;font-size:20px;text-align:center}
-#calendar td:first-child {color:#F79DC2}
-.btn {height:50px;padding:0 25px;border-radius:50px;line-height:50px;background-color:rgba(90, 90, 255, 1);color:#fff;font-size:20px;font-weight:bold}
+.wrap {width:100%;max-width:1200px;margin:0 auto;text-align:center}
+.header {padding:30px 0}
+.title {font-size:36px}
+.title > span {display:block;font-size:18px}
+.btn {padding:10px 25px;border-radius:50px;background-color:rgba(90, 90, 255, 1);color:#fff;font-size:20px;font-weight:bold;transition:all 0.3s ease-out}
+.btn:hover {background-color:rgba(0, 48, 203, 1)}
+[disabled].btn--generate {background-color:rgba(150, 136, 255);cursor:default}
+.ipt {padding:10px;border:1px solid #ccc;border-radius:5px}
+.flex {display:flex;justify-content:space-between;align-items:center;}
+/* calendar */
+.calendar {max-width:370px;margin:0 auto 30px;padding:10px;color:#fff;border-radius:10px;background:#2b4450;box-shadow:1px 1px 10px 0 rgba(0,0,0,0.8)}
+.calendar__component {display:flex;justify-content:space-between;align-items:center}
+.calendar__table {width:100%;margin-top:15px}
+.calendar__table th, .calendar__table td {width:calc(100% / 7);height:50px;font-size:20px;text-align:center}
+.calendar__table td.current-date {position:relative;color:#2b4450;border-radius:5px;background-color:#FAF58C;font-weight:bold}
+.calendar__table td.sun, .calendar__table td.holiday {color:#F79DC2 !important}
+.calendar__table td.sat {color:skyblue}
+.holiday-info {font-weight:bold}
+.holiday-info span {position:relative;display:inline-block;padding-left:25px}
+.holiday-info span::before {content:'★';position:absolute;top:0;left:0;color:#ff0000}
+.user-component {margin-top:25px}
+.user-component__input {max-width:750px;margin:0 auto 25px;}
 /* alert */
-.modal {position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:rgba(0, 0, 0, 0.5)}
-.modal.active {display:block}
-#alert {position:absolute;top:50%;left:50%;width:auto;max-width:750px;padding:30px;border-radius:10px;background:#fafafa;transform:translate(-50%, -50%)}
-#alert p {font-size:32px;font-weight:bold}
-/* #calendar td:last-child {color:skyblue} */
+.popup {position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:rgba(0, 0, 0, 0.5)}
+.popup.active {display:block}
+.popup__inner {position:absolute;top:50%;left:50%;width:auto;max-width:750px;padding:30px;border-radius:10px;background:#fafafa;font-size:32px;font-weight:500;transform:translate(-50%, -50%)}
+.popup__inner > span {color:rgba(90, 90, 255, 1);font-weight:bold}
+/* media */
+@media screen and (max-width:1024px) {
+    .wrap {padding:0 25px}
+}
